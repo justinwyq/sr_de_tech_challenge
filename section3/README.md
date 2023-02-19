@@ -19,3 +19,8 @@
 ### Sales:
 * Grant write access to the items table for the sales team to update the database with new items and remove old items.
 
+# Design 2
+
+The proposed architecture:
+
+![architecture](design2.png)
