@@ -12,7 +12,7 @@ Every hour, the data pipeline script checks the input folder for new raw files:
 1. If new input raw files are found, the files are processed. The output files are created and separated into folders according to whether the application was successful (output_successful folder) or unsuccessful (output_unsuccessful folder). After processing, the raw files are moved into a processed_input folder so that they are not processed twice.
 2. If no new raw input files are found, the script ends
 
-Pipeline script behaviour:
+Pipeline stages:
 
 |**Stage**|**Steps**|
 |---|---|
