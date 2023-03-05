@@ -1,0 +1,20 @@
+-- 1. Which are the top 10 members by spending
+
+with transaction_values as 
+(select transaction_id, sum(item_quantity*item_cost) as transaction_value
+from transaction_items join items using (item_id)
+group by 1)
+
+select membership_id, sum(transaction_value) as total_member_spending
+from transactions join transaction_items using (transaction_id)
+group by 1
+order by 2 desc
+limit 10
+
+-- 2. Which are the top 3 items that are frequently brought by members
+
+select item_id, sum(item_quantity) as total_items
+from transaction_items
+group by 1
+order by 2 desc
+limit 3
